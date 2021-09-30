@@ -1,0 +1,68 @@
+[class^="ic-"], [class*=" ic-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'week' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ic-plus:before {
+  content: "\e90d";
+}
+.ic-bell:before {
+  content: "\e900";
+}
+.ic-mark:before {
+  content: "\e901";
+}
+.ic-markfilled:before {
+  content: "\e902";
+}
+.ic-caret:before {
+  content: "\e903";
+}
+.ic-check:before {
+  content: "\e904";
+}
+.ic-chevron:before {
+  content: "\e905";
+}
+.ic-close:before {
+  content: "\e906";
+}
+.ic-community:before {
+  content: "\e907";
+}
+.ic-lock:before {
+  content: "\e908";
+}
+.ic-menu:before {
+  content: "\e909";
+}
+.ic-new:before {
+  content: "\e90a";
+}
+.ic-search:before {
+  content: "\e90b";
+}
+.ic-home:before {
+  content: "\e90c";
+}
+.ic-images:before {
+  content: "\e90e";
+}
+.ic-heart:before {
+  content: "\e9da";
+}
+.ic-cancel-circle:before {
+  content: "\ea0d";
+}
+.ic-arrow-left2:before {
+  content: "\ea40";
+}
