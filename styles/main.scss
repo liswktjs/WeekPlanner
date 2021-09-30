@@ -1,8 +1,11 @@
+@import './constants/colors';
+@import './constants/breakpoint';
+
 @import './base/reset';
 @import './base/normalize';
 @import './base/fonts';
+@import './base/global';
 
-@import './constants/colors';
 
 @import './modules/icons';
 
