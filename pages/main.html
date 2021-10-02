@@ -6,9 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나의 일주일</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-    <i class="ic-plus"></i>
+    <header class="gnb">
+        <div class="container">
+            <div class="row">
+                <div class="col-">
+                    <div class="gnb-wrapper">
+                        <div class="gnb-left">
+                            <div class="gnb-logo">
+                                <div class="logo" alt="로고: 나의 일주일">
+                                    <strong class="mobile sm-only">나의 일주일</strong>
+                                    <strong class="desktop lg-only">나의 일주일</strong>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="gnb-right">
+                            <div class="gnb-plus">
+                                <a href="/" class="plus_btn" alt="계획 추가할 수 있는 페이지로 이동하는 링크">
+                                    <i class="ic-plus"></i>
+                                </a>
+                            </div>
+                            <div class="gnb-myContent">
+                                <a href="/" class="myContent" alt="검색기능을 제공하고 나의 정보 확인 수정 탈퇴하기 가능한 페이지가 보여지는 링크">
+                                    <div class="myprofile">
+                                        <img src="" alt="나의 프로필 사진" class="myprofile-img">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <aside class="mypage sm-only visually-hidden">
+        <header class="mypage-header">
+            <div class="mypage-left">
+                <button type="button" class="backbtn" alt="홈화면으로 돌아가기 버튼">
+                    <i class="ic-arrow-left2"></i>
+                </button>
+            </div>
+            
+            <div class="mypage-right">
+                <div class="mypage-profile">
+                    <div class="mypage-img">
+                        <img src="../assets/images/profile.jpeg" alt="나의 프로필 사진" class="myprofile-img">
+                    </div>
+                    <div class="mypage-name">
+                        <div class="user-name">사용자 1</div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        
+        <div class="mypage-search">
+            <div class="search-container">
+                <input type="search" alt="검색하기" placeholder="검색어를 입력해주세요">
+                <i class="ic-search"></i>
+            </div>
+        </div>
+
+        <div class="mypage-list">
+            <ul class="mypage-list-content">
+                <li class="mypage-item">나의 정보</li>
+                <li class="mypage-item">프로필 수정하기</li>
+                <li class="mypage-item">공지사항</li>
+                <li class="mypage-item">탈퇴하기</li>
+            </ul>
+        </div>
+    </aside>
 </body>
 </html>
