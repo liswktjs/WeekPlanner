@@ -1,6 +1,14 @@
 # WeekPlanner
 주 단위로 세우는 계획 다이어리 프로젝트
 
+ver1 
+
+기술스택) html + scss + js
+
+ver2 (예정)
+
+기술 스택) ver1 + react + firebase
+
 개발 기록일지
 ```
 🎉2021.09.29 - 아이디어 프로토타입 작성 / ppt 작성
