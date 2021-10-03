@@ -21,13 +21,25 @@
     }
 
     &-left{
-        .backbtn{
-            transform: rotate(90deg);
+        .buttonwrapper{
+            position: relative;
+            .backbtn{
+                position: absolute;
+                top: 4px;
+                transform: rotate(-90deg);
+                i{
+                    font-size: 30px;
+                    &:hover{
+                        color: $logo;
+                    }
+                }
+            }
         }
+        
     }
 
     &-right{
-        margin-left: 20px;
+        margin-left: 50px;
         .mypage-profile{
             display: flex;
             flex-direction: row;
@@ -35,12 +47,48 @@
         .mypage-name{
             margin-left: 20px;
             width: 200px;
-           .user-name{
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            flex-grow: 1;
-           }
+            .namewrapper{
+                position: relative;
+                .user-name{
+                    position:absolute;
+                    top: 7px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
+
+    &-search{
+        .search-container{
+            width: 100%;
+            padding: 4px;
+            margin: 40px 4px;
+            border: 1px solid #111;
+            border-radius: 4px;
+            &:hover{
+                background-color: $hover;
+            }
+            .search{
+                width: 300px;
+            }
+        }
+    }
+
+    &-list{
+        margin: 50px 4px 0 4px;
+        &-content{
+            .mypage-item{
+                padding-left: 10px;
+                font-weight: 700;
+                margin-bottom: 30px;
+
+                &:hover{
+                    color: $logo;
+                }
+            }
         }
     }
 }
