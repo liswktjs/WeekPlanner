@@ -1,5 +1,6 @@
 @import './constants/colors';
 @import './constants/breakpoint';
+@import './constants/zindex';
 
 @import './base/reset';
 @import './base/normalize';
@@ -11,8 +12,11 @@
 
 @import './mixins/responsive';
 
-@import './layouts/grid';
-@import './layouts/main-gnb';
-
 @import './components/logo';
 @import './components/profile';
+
+@import './layouts/grid';
+@import './layouts/main-gnb';
+@import './layouts/main-aside';
+
+

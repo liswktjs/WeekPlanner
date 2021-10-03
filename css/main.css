@@ -4,6 +4,9 @@
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box; }
 
+html {
+  font-family: 'Gowun Batang', serif; }
+
 h1 {
   margin: 0; }
 
@@ -348,6 +351,45 @@ template {
   font-style: normal;
   font-display: block; }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important; }
+
+@media screen and (min-width: 768px) {
+  .sm-only {
+    display: none !important; } }
+
+@media screen and (max-width: 767px) {
+  .md-only {
+    display: none !important; } }
+
+@media screen and (min-width: 1200px) {
+  .md-only {
+    display: none !important; } }
+
+@media screen and (max-width: 1199px) {
+  .lg-only {
+    display: none !important; } }
+
+@media screen and (max-width: 767px) {
+  .sm-hidden {
+    display: none !important; } }
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .md-hidden {
+    display: none !important; } }
+
+@media screen and (min-width: 1199px) {
+  .lg-hidden {
+    display: none !important; } }
+
 [class^="ic-"], [class*=" ic-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'week' !important;
@@ -413,3 +455,193 @@ template {
 
 .ic-arrow-left2:before {
   content: "\ea40"; }
+
+.logo .mobile {
+  color: #9FD8DF;
+  font-weight: 700;
+  font-size: 30px; }
+
+.logo .desktop {
+  color: #9FD8DF;
+  font-weight: 700;
+  font-size: 40px; }
+
+.myProfile {
+  display: block;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  overflow: hidden; }
+  .myProfile img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.container {
+  width: 100%;
+  padding: 0 5px;
+  margin: 0 auto; }
+  .container .row {
+    display: flex;
+    flex-wrap: wrap; }
+  .container [class^='col-'] {
+    padding: 0 10px; }
+  .container .com-sm-1 {
+    width: 25%; }
+  .container .com-sm-2 {
+    width: 50%; }
+  .container .com-sm-3 {
+    width: 75%; }
+  .container .com-sm-4 {
+    width: 100%; }
+  @media screen and (min-width: 768px) {
+    .container {
+      max-width: 1020px;
+      padding: 0 30px; }
+      .container .col-md-1 {
+        width: 8.33333%; }
+      .container .col-md-2 {
+        width: 16.66667%; }
+      .container .col-md-3 {
+        width: 25%; }
+      .container .col-md-4 {
+        width: 33.33333%; }
+      .container .col-md-5 {
+        width: 41.66667%; }
+      .container .col-md-6 {
+        width: 50%; }
+      .container .col-md-7 {
+        width: 58.33333%; }
+      .container .col-md-8 {
+        width: 66.66667%; }
+      .container .col-md-9 {
+        width: 75%; }
+      .container .col-md-10 {
+        width: 83.33333%; }
+      .container .col-md-11 {
+        width: 91.66667%; }
+      .container .col-md-12 {
+        width: 100%; } }
+  @media screen and (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+      padding: 0; }
+      .container .col-lg-1 {
+        width: 95px; }
+      .container .col-lg-2 {
+        width: 190px; }
+      .container .col-lg-3 {
+        width: 285px; }
+      .container .col-lg-4 {
+        width: 380px; }
+      .container .col-lg-5 {
+        width: 475px; }
+      .container .col-lg-6 {
+        width: 570px; }
+      .container .col-lg-7 {
+        width: 665px; }
+      .container .col-lg-8 {
+        width: 760px; }
+      .container .col-lg-9 {
+        width: 855px; }
+      .container .col-lg-10 {
+        width: 950px; }
+      .container .col-lg-11 {
+        width: 1045px; }
+      .container .col-lg-12 {
+        width: 1140px; } }
+
+.gnb-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 8px; }
+
+.gnb-left {
+  width: 100%;
+  flex-shrink: 0; }
+
+.gnb-right {
+  display: flex;
+  flex-direction: row;
+  width: 100%; }
+  .gnb-right .plus .plus_btn {
+    display: block;
+    position: relative; }
+    .gnb-right .plus .plus_btn i {
+      position: absolute;
+      top: -5px;
+      font-size: 50px; }
+    .gnb-right .plus .plus_btn:hover i {
+      color: #9FD8DF; }
+  .gnb-right .myContent {
+    margin-left: 60px; }
+
+.mypage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 300ms ease-in-out;
+  background-color: #fff; }
+  .mypage.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+    transition: transform 300ms ease-in-out; }
+  .mypage-header {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px; }
+  .mypage-left .buttonwrapper {
+    position: relative; }
+    .mypage-left .buttonwrapper .backbtn {
+      position: absolute;
+      top: 4px;
+      transform: rotate(-90deg); }
+      .mypage-left .buttonwrapper .backbtn i {
+        font-size: 30px; }
+        .mypage-left .buttonwrapper .backbtn i:hover {
+          color: #9FD8DF; }
+  .mypage-right {
+    margin-left: 50px; }
+    .mypage-right .mypage-profile {
+      display: flex;
+      flex-direction: row; }
+    .mypage-right .mypage-name {
+      margin-left: 20px;
+      width: 200px; }
+      .mypage-right .mypage-name .namewrapper {
+        position: relative; }
+        .mypage-right .mypage-name .namewrapper .user-name {
+          position: absolute;
+          top: 7px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          flex-grow: 1; }
+  .mypage-search .search-container {
+    width: 100%;
+    padding: 4px;
+    margin: 40px 4px;
+    border: 1px solid #111;
+    border-radius: 4px; }
+    .mypage-search .search-container:hover {
+      background-color: #f7f8fa; }
+    .mypage-search .search-container .search {
+      width: 300px; }
+  .mypage-list {
+    margin: 50px 4px 0 4px; }
+    .mypage-list-content .mypage-item {
+      padding-left: 10px;
+      font-weight: 700;
+      margin-bottom: 30px; }
+      .mypage-list-content .mypage-item:hover {
+        color: #9FD8DF; }
