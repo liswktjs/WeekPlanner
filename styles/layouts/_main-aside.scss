@@ -1,0 +1,46 @@
+.mypage{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $mypage-level;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 200ms ease-in-out;
+    transition: visibility 200ms ease-in-out;
+    background-color: #fff;
+    &.is-active{
+        opacity: 1;
+        visibility: visible;
+    }
+    &-header{
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+    }
+
+    &-left{
+        .backbtn{
+            transform: rotate(90deg);
+        }
+    }
+
+    &-right{
+        margin-left: 20px;
+        .mypage-profile{
+            display: flex;
+            flex-direction: row;
+        }
+        .mypage-name{
+            margin-left: 20px;
+            width: 200px;
+           .user-name{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            flex-grow: 1;
+           }
+        }
+    }
+}
