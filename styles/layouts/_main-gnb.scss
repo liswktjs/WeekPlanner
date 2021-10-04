@@ -2,9 +2,10 @@
     &-wrapper{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        width:100%;
+        justify-content: flex-start;
+        width: 100%;
         margin-top: 8px;
+        
     }   
 
     &-left{
@@ -13,9 +14,12 @@
     }
 
     &-right{
+        position: absolute;
         display: flex;
         flex-direction: row;
+        justify-content: flex-end;
         width: 100%;
+        right: 10px;
         
         .plus{
             .plus_btn{
