@@ -555,7 +555,7 @@ template {
 .gnb-wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
   margin-top: 8px; }
 
@@ -564,9 +564,12 @@ template {
   flex-shrink: 0; }
 
 .gnb-right {
+  position: absolute;
   display: flex;
   flex-direction: row;
-  width: 100%; }
+  justify-content: flex-end;
+  width: 100%;
+  right: 10px; }
   .gnb-right .plus .plus_btn {
     display: block;
     position: relative; }
@@ -645,3 +648,55 @@ template {
       margin-bottom: 30px; }
       .mypage-list-content .mypage-item:hover {
         color: #9FD8DF; }
+
+.today {
+  width: 100%;
+  height: fit-content;
+  margin-top: 40px; }
+  .today-title-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+  .today-date {
+    position: absolute;
+    right: 11px;
+    font-weight: 500;
+    font-size: 15px; }
+    .today-date p {
+      display: inline;
+      margin-left: 10px;
+      font-weight: 500;
+      font-size: 15px; }
+  .today-container {
+    margin-top: 15px; }
+  .today-goal {
+    border: 1px solid #111;
+    border-radius: 4px;
+    padding: 0 8px;
+    width: 93vmin;
+    height: fit-content; }
+    .today-goal .goal-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 10px; }
+      .today-goal .goal-wrapper:last-child {
+        margin-bottom: 10px; }
+      .today-goal .goal-wrapper .goal-content {
+        font-size: 14px;
+        flex-grow: 1;
+        word-wrap: break-word;
+        word-break: break-all; }
+      .today-goal .goal-wrapper .goal-mark {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid #111;
+        margin-left: 15px;
+        flex-shrink: 0;
+        flex-grow: 0; }
+        .today-goal .goal-wrapper .goal-mark i {
+          position: absolute;
+          left: 1.4px;
+          top: 1px; }
