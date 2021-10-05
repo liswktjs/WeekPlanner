@@ -32,37 +32,5 @@
         padding: 0 8px;
         width: 93vmin;
         height: fit-content;
-
-        .goal-wrapper{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-top: 10px;
-
-            &:last-child{
-                margin-bottom: 10px;
-            }
-            .goal-content{
-                font-size: 14px;
-                flex-grow: 1;
-                word-wrap: break-word;
-                word-break: break-all;
-            }
-            .goal-mark{
-                position: relative;
-                width: 20px;
-                height: 20px;
-                border-radius: 50%;
-                border: 1px solid #111;
-                margin-left: 15px;
-                flex-shrink: 0;
-                flex-grow: 0;
-                i{
-                    position: absolute;
-                    left: 1.4px;
-                    top: 1px;
-                }
-            }
-        }
     }
 }
