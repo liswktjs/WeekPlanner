@@ -1,7 +1,7 @@
 .all{
     margin-top: 20px;
     &-wrapper{
-        width: 94vh;
+        width: 90vmin;
         height: fit-content;
     }
     &-title-container{
@@ -16,7 +16,9 @@
     }
     &-btn{
         border-style: none;
-        justify-content: flex-end;
+        position: absolute;
+        right: 0px;
+        transition: transform 200ms ease-in-out;
         i{
             font-size: 18px;
         }
@@ -34,22 +36,37 @@
     
 
     &.is-active{
+        .all-btn{
+            transform: rotate(180deg);
+        }
         
         .all-content{
             opacity: 1;
             visibility: visible;
             transform: translate3d(0, 0, 0);
+            width: 100%;
+
         }
         .all-items{
             display: flex;
             flex-direction: row;
-            width: 100%;
+            width: 93vmin;
+            justify-content: center;
+            align-items: center;
+
+            &.last-item{
+                .last{
+                    border: none;
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            }
             .all-item{
-                width: 40px;
-                height: 40px;
+                width: 35px;
+                height: 35px;
                 border: 1px solid #111;
                 border-radius: 4px;
-                margin: 7px;
+                margin: 5px;
             }
         }
     }
