@@ -1,5 +1,6 @@
 const today = document.querySelector('.today-date p');
 
+
 document.addEventListener('DOMContentLoaded', () =>{
     let now = new Date();
     let y = now.getFullYear();
