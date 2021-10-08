@@ -504,6 +504,101 @@ template {
       left: 1.4px;
       top: 1px; }
 
+.rate {
+  margin-left: 15px;
+  margin-top: 15px; }
+  .rate-title {
+    font-size: 15px;
+    font-weight: 400; }
+  .rate-show {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 92vmin; }
+  .rate-show-item {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #111;
+    border-radius: 4px; }
+
+.all {
+  margin-top: 20px; }
+  .all-wrapper {
+    width: 90vmin;
+    height: fit-content; }
+  .all-title-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%; }
+  .all-title {
+    font-size: 16px;
+    font-weight: 400; }
+  .all-btn {
+    border-style: none;
+    position: absolute;
+    right: 0px;
+    transition: transform 200ms ease-in-out; }
+    .all-btn i {
+      font-size: 18px; }
+  .all-content {
+    margin-top: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, -10%, 0);
+    transition: transform 300ms ease-in-out; }
+  .all.is-active .all-btn {
+    transform: rotate(180deg); }
+  .all.is-active .all-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+    width: 100%;
+    margin-top: 30px; }
+  .all.is-active .all-items {
+    display: flex;
+    flex-direction: row;
+    width: 93vmin;
+    justify-content: center;
+    align-items: center; }
+    .all.is-active .all-items.last-item .last {
+      border: none;
+      visibility: hidden;
+      opacity: 0; }
+    .all.is-active .all-items .all-item {
+      border: 1px solid #111;
+      border-radius: 4px;
+      margin: 5px; }
+  @media screen and (min-width: 320px) {
+    .all.is-active .all-item {
+      width: 39px;
+      height: 39px; } }
+  @media screen and (min-width: 360px) {
+    .all.is-active .all-item {
+      width: 45px;
+      height: 45px; } }
+  @media screen and (min-width: 414px) {
+    .all.is-active .all-item {
+      width: 50px;
+      height: 50px; } }
+
+.month {
+  background-color: #FDFCE5;
+  width: 100%;
+  height: fit-content; }
+  .month-title-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+  .month-title {
+    padding-top: 3px;
+    color: #f4948b; }
+  .month-choice {
+    position: absolute;
+    right: 10px; }
+
 .container {
   width: 100%;
   padding: 0 5px;
