@@ -12,6 +12,61 @@
     <link rel="stylesheet" href="../css/myPage.css">
 </head>
 <body>
-    
+    <header class="mypage">
+        <div class="mypage-header">
+            <a href="main.html" class="mypage-link" alt="메인화면으로 돌아가는 링크">
+                <i class="ic-chevron"></i>
+            </a>
+
+            <div class="header-title">
+                나의 정보
+            </div>
+        </div>
+    </header>
+
+    <article class="mypage">
+        <div class="mypage-container">
+            <form action="" class="mypage-form">
+                <div class="form-item">
+                    <label for="user-name">
+                        이름
+                    </label>
+                    <input type="text" value="사용자 이름" id="user-name" disabled>
+                </div>
+
+                <div class="form-item">
+                    <label for="user-id">
+                        아이디
+                    </label>
+                    <input type="text" value="사용자 아이디" id="user-id" disabled>
+                </div>
+
+                <div class="form-item">
+                    <label for="user-bday">
+                        생년월일
+                    </label>
+                    <input type="text" value="1998.03.31" id="user-bday" disabled>
+                </div>
+
+                <div class="form-item">
+                    <label for="user-email">
+                        이메일
+                    </label>
+                    <input type="email" value="liswktjs@gmail.com" id="user-email" disabled>
+                </div>
+
+                <div class="form-item">
+                    <label for="user-tel">
+                        전화번호
+                    </label>
+                    <input type="tel" value="01011112222" id="user-id" disabled>
+                </div>
+
+                <button class="mypage-form-submit" type="submit">수정 완료하기</button>
+                <button class="mypage-form-change is-active" type="button">정보 수정하기</button>
+            </form>
+        </div>
+        
+    </article>
 </body>
 </html>
