@@ -456,7 +456,7 @@ template {
 .ic-arrow-left2:before {
   content: "\ea40"; }
 
-.mypage-header {
+.header {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -464,15 +464,17 @@ template {
   padding: 12px;
   border-bottom: 1px solid #111;
   position: relative; }
-  .mypage-header i {
-    display: block;
-    transform: rotate(90deg);
-    font-size: 18px; }
-  .mypage-header .header-title {
+  .header .header-title {
     position: absolute;
     font-size: 18px;
     font-weight: 700;
     right: 20px; }
+
+.back-link i {
+  display: block;
+  transform: rotate(90deg);
+  font-size: 18px;
+  color: #111; }
 
 .mypage-form {
   padding: 50px 20px 0px 10px; }
