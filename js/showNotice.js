@@ -8,23 +8,20 @@ noticearr = [
     }
 ]
 
-document.addEventListener('DOMContentLoaded', () => {
-    for(let i = 0; i < noticearr.length; i++){
-        let container = document.createElement('div');
-        container.classList.add('.notice-container-content');
+for(let i = 0; i < noticearr.length; i++){
+    let container = document.createElement('div');
+    container.classList.add('.notice-container-content');
 
-        let index = document.createElement('a');
-        index.classList.add('notice-index');
-        index.innerText = `${i+1}`;
+    let index = document.createElement('a');
+    index.classList.add('notice-index');
+    index.innerText = `${i+1}`;
 
-        let title = document.createElement('a');
-        title.classList.add('notice-title');
-        title.dataset.index = `${i}`;
-        title.innerText = `${noticearr[i].title}`;
+    let title = document.createElement('a');
+    title.classList.add('notice-title');
+    title.value = `${i}`;
+    title.innerText = `${noticearr[i].title}`;
 
-        container.appendChild(index);
-        container.appendChild(title);
-        notice.appendChild(container);
-    }
-
-})
+    container.appendChild(index);
+    container.appendChild(title);
+    notice.appendChild(container);
+}
