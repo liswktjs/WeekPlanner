@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const index = document.querySelector('.notice-index');
-    const title = document.querySelector('.notice-title');
+    const index = document.querySelectorAll('.notice-index');
+    const title = document.querySelectorAll('.notice-title');
 
     const backbtn = document.querySelector('.notice-show-back');
 
@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
         notice.classList.toggle('is-active');
     }
 
-    index.addEventListener('click',toggleActive);
-    title.addEventListener('click', toggleActive);
+    for(let i = 0; i < index.length; i++){
+        index[i].addEventListener('click',toggleActive);
+        title[i].addEventListener('click',toggleActive);
+    }
     backbtn.addEventListener('click',toggleActive);
 })
