@@ -15,7 +15,7 @@ noticearr = [
 
 for(let i = 0; i < noticearr.length; i++){
     let container = document.createElement('div');
-    container.classList.add('.notice-container-content');
+    container.classList.add('notice-container-content');
 
     let index = document.createElement('a');
     index.classList.add('notice-index');
