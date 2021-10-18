@@ -746,23 +746,23 @@ template {
         position: relative; }
         .mypage-right .mypage-name .namewrapper .user-name {
           position: absolute;
-          top: 7px;
+          top: 8px;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
           flex-grow: 1; }
   .mypage-search .search-container {
-    width: 100%;
+    width: 80vw;
     padding: 4px;
-    margin: 40px 4px;
+    margin: 40px 4px 40px 20px;
     border: 1px solid #111;
     border-radius: 4px; }
     .mypage-search .search-container:hover {
       background-color: #f7f8fa; }
     .mypage-search .search-container .search {
-      width: 300px; }
+      width: 80%; }
   .mypage-list {
-    margin: 50px 4px 0 4px; }
+    margin: 50px 4px 0 20px; }
     .mypage-list-content .mypage-item {
       padding-left: 10px;
       font-weight: 700;

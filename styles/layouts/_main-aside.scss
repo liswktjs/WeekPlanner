@@ -65,22 +65,22 @@
 
     &-search{
         .search-container{
-            width: 100%;
+            width: 80vw;
             padding: 4px;
-            margin: 40px 4px;
+            margin: 40px 4px 40px 20px;
             border: 1px solid #111;
             border-radius: 4px;
             &:hover{
                 background-color: $hover;
             }
             .search{
-                width: 300px;
+               width: 80%;
             }
         }
     }
 
     &-list{
-        margin: 50px 4px 0 4px;
+        margin: 50px 4px 0 20px;
         &-content{
             .mypage-item{
                 padding-left: 10px;
