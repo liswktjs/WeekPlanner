@@ -478,3 +478,62 @@ template {
 
 .unregister-header .header {
   background-color: #FFBBCC; }
+
+.unregister {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px; }
+  .unregister-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .unregister-part1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .unregister-part1-content {
+      width: fit-content;
+      height: fit-content;
+      border-bottom: 1px solid #111;
+      word-wrap: break-word;
+      padding: 10px; }
+    .unregister-part1-btn {
+      width: fit-content;
+      height: fit-content;
+      margin-top: 15px;
+      padding: 3px;
+      transition: color 200ms ease-in-out; }
+      .unregister-part1-btn:hover {
+        color: #9FD8DF; }
+  .unregister-part2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate3d(0, 10%, 0);
+    transition: transform 300ms ease-in-out; }
+    .unregister-part2-content {
+      width: 230px;
+      height: fit-content;
+      border-bottom: 1px solid #111;
+      word-wrap: break-word;
+      padding: 10px; }
+    .unregister-part2-btn {
+      width: fit-content;
+      height: fit-content;
+      margin-top: 15px;
+      padding: 3px;
+      transition: color 200ms ease-in-out; }
+      .unregister-part2-btn:hover {
+        color: #9FD8DF; }
+    .unregister-part2.is-active {
+      opacity: 1;
+      visibility: visible;
+      transform: translate3d(0, 0, 0);
+      transition: transform 300ms ease-in-out; }
