@@ -1,0 +1,91 @@
+.intro-header{
+    width: 100%;
+    height: fit-content;
+    
+    &-wrapper{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        
+    }
+    .intro-title{
+        color: $logo;
+    }
+}
+
+.intro{
+    width: 100%;
+    &-login-wrapper{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    &-login{
+        width: 280px;
+        display: flex;
+        justify-content: flex-start;
+        text-align: flex-start;
+        flex-direction: column;
+        &-id{
+            display: flex;
+            
+        }
+        &-pw{
+            display: flex;
+        }
+        label{
+
+            font-weight: 400;
+            font-size: 18px;
+            margin-right: 11px;
+        }
+        input{
+            width: 190px;
+            border-bottom: 1px solid #111;
+        }
+    }
+
+    &-login-btn{
+        width: 100%;
+        padding: 4px;
+        font-size: 18px;
+        background-color: $logo;
+        border-radius: 4px;
+
+        &:hover{
+            background-color: $month;
+        }
+    }
+}
+
+.intro-link{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    &-wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &-join{
+        margin-right: 20px;
+    }
+
+    &-join,
+    &-find{
+        font-size: 14px;
+        text-decoration: underline;
+
+        &:hover{
+            color: $logo;
+        }
+    }
+
+}
+
+.intro-social{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
