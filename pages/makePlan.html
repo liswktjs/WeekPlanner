@@ -12,8 +12,54 @@
     <link rel="stylesheet" href="../css/makePlan.css">
 </head>
 <body>
-    <header class="gnb">
-        
+    <header>
+        <div class="header">
+            <a href="main.html" class="back-link" alt="메인 페이지로 돌아가는 링크">
+                <i class="ic-chevron"></i>
+            </a>
+            <div class="today-date">
+                <p></p>
+            </div>
+            <div class="header-title">
+                계획추가하기
+            </div>
+        </div>  
     </header>
+
+    <article class="today-plan">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="today-plan-header plan-header">
+                        <div class="plan-header-title">
+                            오늘의 목표
+                        </div>
+                        <button class="plan-header-btn">
+                            <i class="ic-caret"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="week-plan">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="week-plan-header plan-header">
+                        <div class="plan-header-title">
+                            이번주 목표
+                        </div>
+                        <button class="plan-header-btn">
+                            <i class="ic-caret"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
 </body>
+<script src="../js/showDate.js"></script>
 </html>
