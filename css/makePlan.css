@@ -461,14 +461,21 @@ template {
   display: flex;
   flex-direction: row;
   background-color: #f4948b;
-  padding: 12px;
+  padding: 0 12px;
   border-bottom: 1px solid #111;
-  position: relative; }
+  position: relative;
+  height: 50px; }
   .header .header-title {
     position: absolute;
     font-size: 18px;
     font-weight: 700;
+    top: 15px;
     right: 20px; }
+  .header .back-link {
+    position: relative;
+    display: block;
+    padding: 15px 18px;
+    left: -20px; }
 
 .back-link i {
   display: block;
@@ -502,5 +509,5 @@ template {
     position: absolute;
     font-size: 18px;
     font-weight: 400;
-    top: 12px;
+    top: 15px;
     right: 130px; }
