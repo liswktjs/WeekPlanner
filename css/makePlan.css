@@ -554,3 +554,29 @@ template {
     font-weight: 400;
     top: 15px;
     right: 130px; }
+
+.today-plan-plus {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+  transition: transform 300ms ease-in-out; }
+  .today-plan-plus.is-active {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+    transform: translate3d(0, 0, 0);
+    transition: transform 300ms ease-in-out; }
+
+.week-plan-plus {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+  transition: transform 300ms ease-in-out; }
+  .week-plan-plus.is-active {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+    transform: translate3d(0, 0, 0);
+    transition: transform 300ms ease-in-out; }
