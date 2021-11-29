@@ -497,11 +497,54 @@ template {
     font-weight: 700; }
   .plan-header-btn {
     position: absolute;
-    right: 15px; }
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    margin-top: -10px; }
     .plan-header-btn i {
       font-size: 18px;
       font-weight: 700;
       padding: 2 15px; }
+
+.week-plan-header {
+  border-top: 1px solid #111; }
+
+.plan-plus-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .plan-plus-container .plan-show-content {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #111;
+    border-radius: 4px;
+    padding: 5px;
+    width: 90vw;
+    height: fit-content;
+    margin: 15px 0;
+    position: relative; }
+    .plan-plus-container .plan-show-content-title {
+      font-size: 14px;
+      font-weight: 400; }
+    .plan-plus-container .plan-show-content-check {
+      position: absolute;
+      right: 5px;
+      top: 2px;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #111;
+      border-radius: 50%;
+      padding: 1px; }
+
+.plan-plus {
+  margin: 10px 0 30px 20px; }
+  .plan-plus-input {
+    width: 80vw;
+    border-bottom: 1px solid #111; }
+  .plan-plus-btn {
+    font-size: 30px; }
+    .plan-plus-btn:hover {
+      color: #9FD8DF; }
 
 .header {
   background-color: #fff; }

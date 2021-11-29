@@ -6,6 +6,8 @@
     }
     &-btn{
         font-size: 30px;
-        
+        &:hover{
+            color: $logo;
+        }
     }
 }
