@@ -1,0 +1,25 @@
+.week-component{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    &-duration{
+        margin-right: 15px;
+        p{
+            font-size: 13px;
+            color: #111;
+        }
+    }
+
+    &-rating{
+        display: flex;
+        flex-direction: row;
+        width: 80vw;
+        border: 1px solid $logo;
+        border-radius: 4px;
+        p{
+            display: flex;
+            flex-grow: 1;
+            background-color: #fff;
+        }
+    }
+}

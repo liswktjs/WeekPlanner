@@ -1,0 +1,10 @@
+.month{
+    &-title-wrapper{
+        padding-top: 10px;
+    }
+    &-content-wrapper{
+        &:last-child{
+            margin-bottom: 30px;
+        }
+    }
+}

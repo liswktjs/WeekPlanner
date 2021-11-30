@@ -599,6 +599,26 @@ template {
     position: absolute;
     right: 10px; }
 
+.week-component {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px; }
+  .week-component-duration {
+    margin-right: 15px; }
+    .week-component-duration p {
+      font-size: 13px;
+      color: #111; }
+  .week-component-rating {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    border: 1px solid #9FD8DF;
+    border-radius: 4px; }
+    .week-component-rating p {
+      display: flex;
+      flex-grow: 1;
+      background-color: #fff; }
+
 .container {
   width: 100%;
   padding: 0 5px;
@@ -815,3 +835,9 @@ template {
     padding: 0 8px;
     width: 93vmin;
     height: fit-content; }
+
+.month-title-wrapper {
+  padding-top: 10px; }
+
+.month-content-wrapper:last-child {
+  margin-bottom: 30px; }
