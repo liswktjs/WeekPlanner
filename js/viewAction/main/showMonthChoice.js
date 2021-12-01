@@ -1,4 +1,4 @@
-import { $ } from "../dom/dom.js";
+import { $ } from "../../dom/dom.js";
 
 export default function showMonthChoice (){
     document.addEventListener('DOMContentLoaded', () => {

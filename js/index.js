@@ -1,9 +1,11 @@
 import { $ } from "./dom/dom.js";
-import showSideBar from "./viewAction/showSidebar.js";
+import showSideBar from "./viewAction/main/showSidebar.js";
 import show52Week from "./viewAction/show52Week.js";
-import showDate from "./viewAction/showDate.js";
-import showMonthChoice from "./viewAction/showMonthChoice.js";
-import linkPage from "./viewAction/linkPage.js";
+import showDate from "./viewAction/module/showDate.js";
+import showMonthChoice from "./viewAction/main/showMonthChoice.js";
+import linkPage from "./viewAction/main/linkPage.js";
+
+
 
 export default function weekPlanner(){
     this.init = () => {
@@ -11,6 +13,7 @@ export default function weekPlanner(){
         linkPage();
         showDate();
         showMonthChoice();
+        
     }
     const initEventListener = () => {
         $('.sideBtn').addEventListener("click",showSideBar);
