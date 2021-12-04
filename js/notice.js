@@ -1,3 +1,4 @@
+import showNoticeDetail from "./showNoticeDetail.js";
 import showNotice from "./viewAction/notice/showNotice.js";
 
 export default function notice(){
@@ -17,6 +18,7 @@ export default function notice(){
     }
     this.init = () =>{
         showNotice(this.noticObject.noticearr);
+        showNoticeDetail(this.noticObject.noticearr);
     }
     
 }
