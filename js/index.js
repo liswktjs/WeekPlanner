@@ -1,6 +1,6 @@
 import { $ } from "./dom/dom.js";
 import showSideBar from "./viewAction/main/showSidebar.js";
-import show52Week from "./viewAction/show52Week.js";
+import show52Week from "./viewAction/main/show52Week.js";
 import showDate from "./viewAction/module/showDate.js";
 import showMonthChoice from "./viewAction/main/showMonthChoice.js";
 import linkPage from "./viewAction/main/linkPage.js";
