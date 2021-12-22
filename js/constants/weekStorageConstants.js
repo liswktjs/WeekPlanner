@@ -1,4 +1,4 @@
-export const WEEK_LOCALSTORAGE_NAME = 'week-plan';
+export const WEEK_STORAGE_NAME = 'week-plan';
 export const KEY_INDEX = 'index'
 export const KEY_PLANLIST = 'planlist'
 export const KEY_PLAN = 'plan'
