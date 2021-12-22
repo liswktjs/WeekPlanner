@@ -62,4 +62,6 @@ ver 1 개발 기록일지
 💄 2021.11.30 main화면 week별 목표 달성률 표시하는 component 스타일링 작업 
 
 ♻ 2021.12.01 기존의 view관련 함수들 module화 통해서 통합관리가 가능하도록 작업 
+
+💾 2021.12.22 localStorage관련 README update , 상수 정함 
 ```
