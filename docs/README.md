@@ -1,12 +1,12 @@
-## 로컬 스토리지를 통한 유저의 정보 입력받기 
+# 로컬 스토리지
 
-### 계획
+## 계획
 
 localStorage 사용 
 
 (api활용한 데이터 관리는 local server관리 하는 node.js 학습 후 적용해볼 예정)
 
-### 시나리오 
+## 시나리오 
 
 makePlan페이지에서 오늘의 목표와 주 단위의 목표를 입력할 수 있음 
 
@@ -14,7 +14,7 @@ makePlan페이지에서 오늘의 목표와 주 단위의 목표를 입력할 �
 
 유저가 하루별 계획 입력 -> user-today-plan 의 데이터 개수로 id가 부여됨 -> 현재의 날짜를 받아와 요일과 날짜 값을 저장한다 -> 유저가 계획 달성 버튼을 눌렀을 때 done이 toggle이 된다 -> 날짜별로 계산을 하여서 달성률을 보여준다 -> 유저에게 보여질때에는 오늘 날짜를 기준으로 계획들이 조회되어 보여진다 
 
-#### 유저에게 입력받는 데이터 종류 
+### 유저에게 입력받는 데이터 종류 
 
 ||오늘의 목표들|오늘의 목표 달성 여부|주간 목표|주간목표 달성여부|
 |---|---|---|---|---|
@@ -24,10 +24,12 @@ makePlan페이지에서 오늘의 목표와 주 단위의 목표를 입력할 �
 |나누는 단위|요일별로 다르게|계획별로|주 단위(한달 4번)|계획 별로|
 |저장되는 데이터테이블|user-today-plan|user-today-plan|user-week-plan|user-week-plan|
 
+<hr>
 
-### 데이터베이스 
+## 데이터베이스 종류
 
-#### today-plan
+
+### today-plan
 
 
 ||index|요일|planList|done|달성률|
@@ -56,7 +58,7 @@ makePlan페이지에서 오늘의 목표와 주 단위의 목표를 입력할 �
         },
     ]
 
-#### week-plan
+### week-plan
 
 ||index|planList|done|달성률|
 |---|---|---|---|---|
@@ -78,4 +80,24 @@ makePlan페이지에서 오늘의 목표와 주 단위의 목표를 입력할 �
             achivement : done이 true인 elemenet 개수 / planList.length
         }
 
+    ]
+
+
+### notice
+
+공지 Storage의 경우 localStorage에도 저장을하고 프로그램 내에서도 상수 update
+
+||index|title|content|
+|----|----|----|----|
+|데이터타입|Number|String|String|
+|값얻는방법|공지 업데이트 될때마다 +1 삭제시 -1|관리자가 직접입력|관리자가 직접 입력|
+|예시|0|first-notice|첫번째공지|
+
+    저장형태
+    notice = [
+        {
+            'index': 0,
+            'title' : 'firstnotice',
+            'content' :'첫번째공지',
+        }
     ]
