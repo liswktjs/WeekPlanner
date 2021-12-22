@@ -1,10 +1,10 @@
 import {$} from '../../dom/dom.js';
 
 export default function showNotice(noticearr){
-    const notice = $('.notice-container');
     for(let i = 0; i < noticearr.length; i++){
         let container = document.createElement('div');
         container.classList.add('notice-container-content');
+        container.dataset.index = `${i}`;
         
         let index = document.createElement('a');
         index.classList.add('notice-index');
@@ -20,7 +20,7 @@ export default function showNotice(noticearr){
     
         container.appendChild(index);
         container.appendChild(title);
-        notice.appendChild(container);
+        $('.notice-container').appendChild(container);
     }
 }
 
