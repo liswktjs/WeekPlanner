@@ -63,5 +63,5 @@ ver 1 개발 기록일지
 
 ♻ 2021.12.01 기존의 view관련 함수들 module화 통해서 통합관리가 가능하도록 작업 
 
-💾 2021.12.22 localStorage관련 README update , 상수 정함 
+💾 2021.12.22 localStorage관련 README update , 상수 정함 , 계획삭제 버튼 추가 , localStorage에서 계획 정보 불러와 화면에 render
 ```
