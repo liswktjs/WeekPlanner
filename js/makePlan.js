@@ -20,7 +20,9 @@ export default function makePlan() {
     }
     const handleWeekPlanAddEvent = () => {
         $('.week-plan-plus-btn').addEventListener('click', () =>{
-            console.log('week');
+            if(getUserInput() !== false){
+                initUserInputElement();
+            }
         })
 
     }
