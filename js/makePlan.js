@@ -18,7 +18,7 @@ export default function makePlan() {
     const handleTodayPlanAddEvent = () => {
         $('.today-plan-plus-btn').addEventListener('click', ()=>{
             if(getUserInput(TODAY) !== false){
-                setStorage(TODAY_STORAGE_NAME,$('.plan-plus-input').value);
+                setStorage(TODAY_STORAGE_NAME,$(`.${TODAY}-plan-input`).value);
                 initUserInputElement();
                 
             }
@@ -27,7 +27,7 @@ export default function makePlan() {
     const handleWeekPlanAddEvent = () => {
         $('.week-plan-plus-btn').addEventListener('click', () =>{
             if(getUserInput(WEEK) !== false){
-                setStorage(WEEK_STORAGE_NAME, $('.plan-plus-input').value);
+                setStorage(WEEK_STORAGE_NAME, $(`.${WEEK}-plan-input`).value);
                 initUserInputElement();
             }
         })
