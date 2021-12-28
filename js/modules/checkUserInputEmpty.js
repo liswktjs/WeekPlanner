@@ -5,6 +5,7 @@ export default function checkUserInputEmpty(userInput){
     if(userInput === ''){
         showAlert(ERROR_MSG[EMPTY_ERROR]);
         return false;
+    }else{
+        return true;
     }
-    return true;
 }

@@ -6,6 +6,7 @@ import initUserInputElement from './viewAction/module/initUserInputElement.js'
 import setStorage from "./store/setStorage.js";
 import { TODAY_STORAGE_NAME } from "./constants/todayStorageConstants.js";
 import { WEEK_STORAGE_NAME } from "./constants/weekStorageConstants.js";
+import { TODAY, WEEK } from "./constants/constants.js";
 
 export default function makePlan() {
     this.init = () => {
@@ -16,7 +17,7 @@ export default function makePlan() {
     }
     const handleTodayPlanAddEvent = () => {
         $('.today-plan-plus-btn').addEventListener('click', ()=>{
-            if(getUserInput() !== false){
+            if(getUserInput(TODAY) !== false){
                 setStorage(TODAY_STORAGE_NAME,$('.plan-plus-input').value);
                 initUserInputElement();
                 
@@ -25,7 +26,7 @@ export default function makePlan() {
     }
     const handleWeekPlanAddEvent = () => {
         $('.week-plan-plus-btn').addEventListener('click', () =>{
-            if(getUserInput() !== false){
+            if(getUserInput(WEEK) !== false){
                 setStorage(WEEK_STORAGE_NAME, $('.plan-plus-input').value);
                 initUserInputElement();
             }
