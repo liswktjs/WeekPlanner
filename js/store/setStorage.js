@@ -3,6 +3,7 @@ import getDateIndex from "../modules/getDateIndex.js";
 import getDay from "../modules/getDay.js";
 import getStorageIndex from "../modules/getStorageIndex.js";
 import store from "./store.js";
+import updateAcivement from "./updateAchivement.js";
 
 function createStoreCompoent(storagename, newElement){
     
@@ -36,8 +37,8 @@ export default function setStorage(storagename, value){
         const index = getDateIndex(storagename);
         const storageIndex = getStorageIndex(oddStorage, index);
         oddStorage[storageIndex][KEY_PLANLIST].push(newElement);
-        
         store.setLocalStoreage(storagename,oddStorage);
+        updateAcivement(storagename);
         
     }else{
         store.setLocalStoreage(storagename, [createStoreCompoent(storagename, newElement)]);
