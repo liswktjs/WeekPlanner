@@ -1,16 +1,14 @@
-import { KEY_PLANLIST, TODAY_STORAGE_NAME } from "../constants/todayStorageConstants.js";
-import {WEEK_STORAGE_NAME} from '../constants/weekStorageConstants.js';
-import getDate from "../modules/getDate.js";
+import { KEY_PLANLIST, TODAY_STORAGE_NAME } from "../constants/todayStorageConstants.js"; 
+import getDateIndex from "../modules/getDateIndex.js";
 import getDay from "../modules/getDay.js";
 import getStorageIndex from "../modules/getStorageIndex.js";
-import getWeek from "../modules/getWeek.js";
 import store from "./store.js";
 
 function createStoreCompoent(storagename, newElement){
     
     if(storagename === TODAY_STORAGE_NAME){
         const newStore = {
-            index : getIndex(storagename),
+            index : getDateIndex(storagename),
             day : getDay(),
             planlist : [newElement],
             achivement: 0,
@@ -18,7 +16,7 @@ function createStoreCompoent(storagename, newElement){
         return newStore
     }else{
         const newStore = {
-            index : getIndex(storagename),
+            index : getDateIndex(storagename),
             planlist: [newElement],
             achivement: 0,
         }
@@ -26,18 +24,6 @@ function createStoreCompoent(storagename, newElement){
     }
 }
 
-function getIndex(storagename){
-    
-    if(storagename === TODAY_STORAGE_NAME){
-        const indexList = getDate();
-        return indexList.join('');
-    }else{
-        const time = new Date();
-        const weekNo = getWeek(time);
-        return weekNo.join('');
-    }
-    
-}
 
 export default function setStorage(storagename, value){
     let oddStorage = store.getLocalStorage(storagename);
@@ -47,7 +33,7 @@ export default function setStorage(storagename, value){
     }
 
     if(oddStorage){
-        const index = getIndex(storagename);
+        const index = getDateIndex(storagename);
         const storageIndex = getStorageIndex(oddStorage, index);
         oddStorage[storageIndex][KEY_PLANLIST].push(newElement);
         
