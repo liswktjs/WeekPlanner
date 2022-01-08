@@ -1,5 +1,7 @@
 import { KEY_PLAN, KEY_PLANLIST } from "../../constants/todayStorageConstants.js";
 import { $ } from "../../dom/dom.js";
+import getDateIndex from "../../modules/getDateIndex.js";
+import getStorageIndex from "../../modules/getStorageIndex.js";
 import store from "../../store/store.js";
 import planCheckToggle from './planCheckToggle.js';
 
@@ -20,7 +22,12 @@ function renderPlanListElement (planList){
 export default function showPlanList(type){
     const planListObj = store.getLocalStorage(type);
     if(planListObj){
-        const planList = planListObj[KEY_PLANLIST];
+        
+        const dateIndex = getDateIndex(type);
+        const storageIndex = getStorageIndex(type, dateIndex);
+        const planList = planListObj[storageIndex];
+        console.log(planListObj);
+        console.log(planList);
         $(`.plan-show ${type}`).innerHTML = renderPlanListElement(planList);
         planCheckToggle();
     }

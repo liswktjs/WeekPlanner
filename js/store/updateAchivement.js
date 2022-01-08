@@ -1,9 +1,7 @@
-import { KEY_ACHIVEMENT, KEY_PLANLIST } from "../constants/todayStorageConstants.js";
-import getDate from "../modules/getDate.js";
+import { KEY_ACHIVEMENT, KEY_PLANLIST, KEY_DONE } from "../constants/todayStorageConstants.js";
 import getDateIndex from "../modules/getDateIndex.js";
-import getWeek from "../modules/getWeek.js";
 import store from "./store.js";
-
+import getStorageIndex from "../modules/getStorageIndex.js";
 function getDoneCount(planList){
     return planList.reduce((acc,cur) => {
         if(cur[KEY_DONE] == true){
@@ -13,7 +11,7 @@ function getDoneCount(planList){
 }
 
 export default function updateAcivement(storagename){
-    let oddStorage = store.getStorage(storagename);
+    let oddStorage = store.getLocalStorage(storagename);
     const dateIndex = getDateIndex(storagename);
     const storageIndex = getStorageIndex(storagename, dateIndex);
     const planList = oddStorage[storageIndex][KEY_PLANLIST];
