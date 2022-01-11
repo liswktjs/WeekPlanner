@@ -6,7 +6,7 @@ import store from "../../store/store.js";
 import planCheckToggle from './planCheckToggle.js';
 
 function renderPlanListElement (planList){
-    planList.map((item,index) => {
+    return planList.map((item,index) => {
         return `<div class="plan-show-content today-plan-content>
             <p class="plan-show-content-title">${item[KEY_PLAN]}</p>
             <button type="button" class="plan-show-content-check today-plan-check is-active" data-index='${index}'>
@@ -22,13 +22,10 @@ function renderPlanListElement (planList){
 export default function showPlanList(type){
     const planListObj = store.getLocalStorage(type);
     if(planListObj){
-        
         const dateIndex = getDateIndex(type);
-        const storageIndex = getStorageIndex(type, dateIndex);
-        const planList = planListObj[storageIndex];
-        console.log(planListObj);
-        console.log(planList);
-        $(`.plan-show ${type}`).innerHTML = renderPlanListElement(planList);
-        planCheckToggle();
+        const storageIndex = getStorageIndex(planListObj, dateIndex);
+        const planList = planListObj[storageIndex][KEY_PLANLIST];
+        $(`.${type}-list`).innerHTML = renderPlanListElement(planList);
+        // planCheckToggle();
     }
 }
