@@ -36,7 +36,12 @@ export default function setStorage(storagename, value){
     if(oddStorage){
         const index = getDateIndex(storagename);
         const storageIndex = getStorageIndex(oddStorage, index);
-        oddStorage[storageIndex][KEY_PLANLIST].push(newElement);
+        if(storageIndex === false){
+            oddStorage[oddStorage.length] = createStoreCompoent(storagename, newElement);
+        }else{
+            oddStorage[storageIndex][KEY_PLANLIST].push(newElement);
+        }
+        
         store.setLocalStoreage(storagename,oddStorage);
         updateAcivement(storagename);
         

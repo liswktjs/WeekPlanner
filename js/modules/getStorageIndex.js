@@ -1,11 +1,15 @@
 import { KEY_INDEX } from "../constants/weekStorageConstants.js";
 
 export default function getStorageIndex(oddStorage, _index){
-    let index = 0;
+    let find_index = false;
     for(let i = 0; i < oddStorage.length; i++){
         if(oddStorage[i][KEY_INDEX] === _index){
-            index = i;
+            find_index = i;
         }
     }
-    return index;
+    if(find_index !== false){
+        return find_index;
+    }else{
+        return false;
+    }
 }
