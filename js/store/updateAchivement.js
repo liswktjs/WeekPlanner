@@ -13,7 +13,7 @@ function getDoneCount(planList){
 export default function updateAcivement(storagename){
     let oddStorage = store.getLocalStorage(storagename);
     const dateIndex = getDateIndex(storagename);
-    const storageIndex = getStorageIndex(storagename, dateIndex);
+    const storageIndex = getStorageIndex(oddStorage, dateIndex);
     const planList = oddStorage[storageIndex][KEY_PLANLIST];
     const doneCount = getDoneCount(planList);
     if(doneCount === 0){
@@ -22,5 +22,4 @@ export default function updateAcivement(storagename){
         oddStorage[storageIndex][KEY_ACHIVEMENT] = (doneCount) / planList.length;
     }
     store.setLocalStoreage(storagename,oddStorage);
-
 }
