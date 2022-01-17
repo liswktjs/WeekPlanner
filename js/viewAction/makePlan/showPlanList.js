@@ -9,10 +9,10 @@ function renderPlanListElement (planList, type){
     return planList.map((item,index) => {
         return `<div class="plan-show-content ${type}-content">
             <p class="plan-show-content-title">${item[KEY_PLAN]}</p>
-            <button type="button" class="plan-show-content-check ${type}-check is-active" data-index='${index}'>
+            <button type="button" class="plan-show-content-check ${type}-check ${type}-data-${index}" data-index='${index}'>
                 <i class="ic-check"></i>
             </button>
-            <button type="button" class="plan-show-content-delete ${type}-delete is-actvie" data-index='${index}'>
+            <button type="button" class="plan-show-content-delete ${type}-delete ${type}-data-${index}" data-index='${index}'>
                 <i class="ic-close"></i>
             </button>
         </div>`
