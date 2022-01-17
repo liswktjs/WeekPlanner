@@ -21,9 +21,10 @@ function renderPlanListElement (planList){
 
 export default function showPlanList(type){
     const planListObj = store.getLocalStorage(type);
-    if(planListObj){
-        const dateIndex = getDateIndex(type);
-        const storageIndex = getStorageIndex(planListObj, dateIndex);
+    const dateIndex = getDateIndex(type);
+    const storageIndex = getStorageIndex(planListObj, dateIndex);
+
+    if(planListObj[storageIndex]){
         const planList = planListObj[storageIndex][KEY_PLANLIST];
         $(`.${type}-list`).innerHTML = renderPlanListElement(planList);
         // planCheckToggle();

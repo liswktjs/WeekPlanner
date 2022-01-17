@@ -7,6 +7,7 @@ import setStorage from "./store/setStorage.js";
 import { TODAY_STORAGE_NAME } from "./constants/todayStorageConstants.js";
 import { WEEK_STORAGE_NAME } from "./constants/weekStorageConstants.js";
 import { TODAY, WEEK } from "./constants/constants.js";
+import showPlanList from "./viewAction/makePlan/showPlanList.js";
 
 export default function makePlan() {
     this.init = () => {
@@ -20,7 +21,7 @@ export default function makePlan() {
             if(getUserInput(TODAY) !== false){
                 setStorage(TODAY_STORAGE_NAME,$(`.${TODAY}-plan-input`).value);
                 initUserInputElement();
-                
+                showPlanList(TODAY_STORAGE_NAME);
             }
         })
     }
@@ -29,6 +30,7 @@ export default function makePlan() {
             if(getUserInput(WEEK) !== false){
                 setStorage(WEEK_STORAGE_NAME, $(`.${WEEK}-plan-input`).value);
                 initUserInputElement();
+                showPlanList(WEEK_STORAGE_NAME);
             }
         })
 
